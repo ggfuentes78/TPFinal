@@ -1,0 +1,26 @@
+.resaltarItem:hover{ /* Cambio color de fondo cuando se pasa por encima */
+    color:$blanco;
+    background-color:rgb(35, 35, 82);
+}
+.menuNav__btn:hover{ /* Cambia color del boton del nav cuando se pasar por encima */
+    background-color: cornflowerblue;
+}
+.agrandarTexto:hover { /* Efecto para agrandar texto */
+    transition: 2s;
+    font-size: 1.1rem;
+}
+.inputTranf{
+    width: 15em;
+    transition: all 1s;
+}
+.inputTranf:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
+    width: 15em;
+    font-size: 1.1em;
+}
+.efectoAgrandar:hover{ /* Efecto para agrandar contenidos */ 
+    transition: 2s;
+    transform: scale(1.1,1.1);
+}
+ul li:hover ul{
+    display: block;
+}

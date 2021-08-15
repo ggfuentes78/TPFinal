@@ -1,0 +1,385 @@
+html{
+    margin: $marginCero;
+    padding: $paddingCero;
+}
+body{ /*Se define Color de la letra, fondo y tipografia para el body */
+    color: $colorLetra;
+    background-color: $colorFondo;
+    font-family: $fuente;
+    margin: 2.5em 0.5em;
+    padding: 2em 0.5em;
+}
+.navListaHorizontal{ /* Comienzo del estilo del menu de navegacion */
+    background-color:$colorFondoOscuro;
+    display: inline-block; /*Hace que la lista se visualice horizontal*/
+    padding: 5px;
+    margin: 5px 15px;
+    width: 150px;
+    text-align: center;
+    position: relative;
+} /* Fin del estilo del menu de navegacion */
+.menuNav{ /* Bloque Nav */
+    list-style-type:none;
+    padding: $paddingCero;
+}
+.menuNav__btn{
+    background-color: $blanco;
+    padding: 0.5em 0.5em;
+    margin: 0.5em 0.5em;
+    border-radius: 0.5em;
+}
+td{
+    padding-left: 20px ;
+    padding-right: 20px;
+    border: $blanco;
+    border-style: solid;
+}
+.imgDerecha{
+    right: 1%;
+}
+ul ul{
+    position: absolute;
+    display: none;
+    li{
+        z-index: 10000000000000;
+        background-color: dimgray;
+        display: block;
+        padding: 5px 5px;
+    }
+}
+.tipoContacto{
+    background-color: $colorBtn;
+    padding: 1em 2em;
+    margin: 0.5em 0.5em;
+}
+.formulario{ /* Bloque Formulario */
+    padding: 1em 1em;
+    .formulario__campoTexto{
+        width: 15em;
+        .formulario__campoTexto--transformacion{
+            transition: all 1s;
+        }
+    }
+}
+.containerMobile{ /* Estilo por defecto para visualizacion en Mobile */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+        "boxHeader"  
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "boxFooter";
+    /* Definicion de Grid del Header */ 
+    .boxHeader{ /* Bloque */
+        grid-area: boxHeader;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "boxLogo boxMenu"
+            "boxNav boxNav";
+        .boxHeader--fondo{
+                background-color: $colorFondoOscuro
+        }
+        .boxHeader__boxLogo{ /* Contenedor para el logo */
+            grid-area: boxLogo;
+            justify-self: start;
+            padding: 1em 1em;    
+        }
+        .boxHeader__boxNav{ /* Contenedor para el Nav */
+            grid-area: boxNav;
+            width: 100%;
+        }
+        .boxHeader__boxNav--fondo{
+            background-image: linear-gradient(to bottom, $colorFondoOscuro,$colorFondo);
+        }
+    }
+    .boxDestacados{ /* Contenedor para seccion Destacados */
+        grid-area: box1;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "boxTitulo"
+            "boxItems";
+        .boxDestacados__titulo{
+            grid-area: boxTitulo;
+        }
+        .boxDestacados__contenido{
+            grid-area: boxItems;
+        }
+    }
+    .BoxGenerica1x1{ /* Contenedor generico para contenido simple (1x1) */
+        grid-area: box1;
+    }
+    /* Grid para Servicios */
+    .boxServicios{ /* Bloque */
+        grid-area: box2; 
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat (7,auto);
+        grid-template-areas:
+            "boxTitulo"
+            "boxItemServicio1"
+            "boxItemServicio2"
+            "boxItemServicio3"
+            "boxItemServicio4"
+            "boxItemServicio5"
+            "boxItemServicio6";
+        @for $i from 1 through $cantItemsServicos {
+            .boxServicios__boxItem#{$i}{ /* Contenedor para Item de Servicio */
+            grid-area: boxItemServicio#{$i};
+            padding: 1em 2em;}
+        }
+    }
+    /* Grid para seccion Contacto */
+    .boxContacto{ /* Bloque */
+        grid-area: box3;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "boxTitulo ."
+            "itemContacto1 itemContacto2"
+            "itemContacto3 itemContacto4";
+        @for $i from 1 through $cantItemsContacto {
+            .boxContacto__itemContacto#{$i}Img{ /* Contenedor para Consulta */
+            grid-area: itemContacto#{$i}; padding: 1em 1em;}
+            .boxContacto__itemContacto#{$i}Texto{ /* Contenedor para texto de Consulta (solo se visualiza en version escritorio) */
+            display: none;}
+        }
+    }
+    .boxUbicacion{
+        grid-area: box4;
+    }
+    /* Grid para seccion Galeria */
+    .boxGaleria{ /* Bloque */
+        grid-area: box1;
+        display: grid;
+        grid-template-columns: 97%;
+        grid-template-rows: repeat (7,auto);
+        grid-template-areas:
+            "boxTitulo"
+            "boxItemGaleria1"
+            "boxItemGaleria2"
+            "boxItemGaleria3"
+            "boxItemGaleria4"
+            "boxItemGaleria5"
+            "boxItemGaleria6";
+        @for $i from 1 to $cantItemsGaleria {
+            .boxGaleria__item#{$i}{
+            grid-area: boxItemGaleria#{$i};
+            padding: 0.3em 0.3em;
+            }
+        }
+    }
+    .boxFooter{ /* Bloque */
+        grid-area: boxFooter;
+        color:$blanco;
+        margin-top: 10em;
+    }
+    .boxFooter--fondo{
+        background-color: $colorFondoOscuro;
+        }
+    
+}
+.seccionServiciosFlexBox{
+    display: flex;
+    flex-direction: column;
+}
+.serviciosFlexBox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.itemServicios{
+    background-color:$colorBtn;
+    padding: 10px 20px;
+}
+.contactoFlexBox{
+    display: flex;
+    flex-direction: column;
+}
+.boxTitulo{ /* Contenedor generico para titulos */
+    grid-area: boxTitulo;
+}
+@media only screen and (min-width: 768px) { /* Estilo para Ipad con pantalla vertical */
+	.containerMobile {
+            grid-template-columns: 1fr 1fr;
+    
+        .boxHeader {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 2fr;
+            .boxHeader__boxLogo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                justify-self: start;
+                align-self: start;
+            }
+            .boxHeader__menu{
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+                justify-self: end;
+                align-self: start;
+            }
+            .boxHeader__boxNav{
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+        }
+        .boxDestacados {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
+        .BoxGenerica1x1 {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
+        .boxServicios {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 1fr;
+            .boxServicios__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+            $fila: 2;
+            @for $i from 1 through $cantItemsServicos {
+                .boxServicios__boxItem#{$i}{
+                    @if floor($i/2)==$i/2 { grid-row: #{$fila} / #{$fila+1}; grid-column: 2 / 3;$fila:$fila+1}
+                    @else {grid-row: #{$fila} / #{$fila+1}; grid-column: 1 / 2;}
+                }
+            }
+        }
+        .boxGaleria {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 1fr;
+            .boxGaleria__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+            $fila: 2;
+            @for $i from 1 through $cantItemsGaleria {
+                .boxGaleria__item#{$i}{
+                    @if floor($i/2)==$i/2 { grid-row: #{$fila} / #{$fila+1}; grid-column: 2 / 3;$fila:$fila+1}
+                    @else {grid-row: #{$fila} / #{$fila+1}; grid-column: 1 / 2;}
+                }
+            }
+        }
+        .boxContacto {
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;
+            align-content: center;
+        }
+        .boxUbicacion {
+            grid-row: 5 / 6;
+            grid-column: 1 / 3;
+        }
+        .boxFooter {
+            grid-row: 6 / 7;
+            grid-column: 1 / 3;
+        }
+    }
+}
+@media only screen and (min-width: 1024px) { /* Estilo para Pc de escritorio con pantalla horizontal */
+	.boxHeader--fondo{
+        background-image: linear-gradient(to bottom, $colorFondoOscuro,$colorFondo);
+    }
+    .menuNav__btn{ /* Comienzo del estilo del menu de navegacion */
+        display: inline-block; /*Hace que la lista se visualice horizontal*/
+        margin: 0.5em 0.5em;
+        width: 150px;
+        text-align: center;
+        /*position: relative;*/
+        background-color: $blanco;
+        padding: 0.5em 0.5em;
+    } /* Fin del estilo del menu de navegacion */
+    .containerMobile {
+        grid-template-columns: 1fr 1fr;
+        .boxHeader {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 8fr;
+            .boxHeader__boxLogo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+            .boxHeader__menu{
+                display: none;
+            }
+            .boxHeader__boxNav{
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+                align-self: center;
+                justify-self: center;
+            }    
+        }
+        .boxDestacados {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
+        .BoxGenerica1x1 {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+        }
+        .boxServicios {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 1fr 1fr;
+            .boxServicios__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 4;
+            }
+            $fila:2;
+            $columna:1;
+            @for $i from 1 through $cantItemsServicos {
+                .boxServicios__boxItem#{$i}{
+                    @if floor($i/3)==$i/3 { grid-row: #{$fila} / #{$fila+1}; grid-column: #{$columna} / #{$columna + 1};$fila: $fila + 1; $columna: 1;}
+                    @else { grid-row: #{$fila} / #{$fila+1}; grid-column: #{$columna} / #{$columna + 1}; $columna: $columna + 1 }
+                }
+            }    
+        }
+        .boxGaleria {
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 1fr 1fr;
+            .boxGaleria__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 4;
+            }
+            $fila:2;
+            $columna:1;
+            @for $i from 1 through $cantItemsGaleria {
+                .boxGaleria__item#{$i}{
+                    @if floor($i/3)==$i/3 { grid-row: #{$fila} / #{$fila+1}; grid-column: #{$columna} / #{$columna + 1};$fila: $fila + 1; $columna: 1;}
+                    @else { grid-row: #{$fila} / #{$fila+1}; grid-column: #{$columna} / #{$columna + 1}; $columna: $columna + 1 }
+                }
+            }   
+        }
+        .boxContacto {
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;
+            align-content: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr 20fr;
+            .boxContacto__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 5;
+            }
+            @for $i from 1 through $cantItemsContacto {
+                .boxContacto__itemContacto#{$i}Img{ grid-row: #{$i+1} / #{$i+2}; grid-column: 1 / 2; padding: 0em 1em; margin: 0.3em 0em;}
+                .boxContacto__itemContacto#{$i}Texto{display: block; grid-row: #{$i+1} / #{$i+2}; grid-column: 2 /6; margin: 0.3em 0em;}  
+            }
+        }
+        .boxUbicacion {
+            grid-row: 5 / 6;
+            grid-column: 1 / 3;
+        }
+        .boxFooter {
+            grid-row: 6 / 7;
+            grid-column: 1 / 3;
+        }
+    }
+}
