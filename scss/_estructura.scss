@@ -1,13 +1,13 @@
 html{
-    margin: $marginCero;
-    padding: $paddingCero;
+    margin: 1em 5em;
+    padding: 1em 5em;
 }
 body{ /*Se define Color de la letra, fondo y tipografia para el body */
     color: $colorLetra;
     background-color: $colorFondo;
     font-family: $fuente;
-    margin: 2.5em 0.5em;
-    padding: 2em 0.5em;
+    margin: 1em 0.5em;
+    padding: 1em 0.5em;
 }
 .navListaHorizontal{ /* Comienzo del estilo del menu de navegacion */
     background-color:$colorFondoOscuro;
@@ -177,7 +177,7 @@ ul ul{
     .boxFooter{ /* Bloque */
         grid-area: boxFooter;
         color:$blanco;
-        margin-top: 10em;
+        margin: 0.1em 0em;
     }
     .boxFooter--fondo{
         background-color: $colorFondoOscuro;

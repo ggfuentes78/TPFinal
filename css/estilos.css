@@ -14,16 +14,16 @@
   padding: 3em 3em; }
 
 html {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px; }
+  margin: 1em 5em;
+  padding: 1em 5em; }
 
 body {
   /*Se define Color de la letra, fondo y tipografia para el body */
   color: #060236;
   background-color: #e7e7e7;
   font-family: "Montserrat", sans-serif;
-  margin: 2.5em 0.5em;
-  padding: 2em 0.5em; }
+  margin: 1em 0.5em;
+  padding: 1em 0.5em; }
 
 .navListaHorizontal {
   /* Comienzo del estilo del menu de navegacion */
@@ -215,7 +215,7 @@ ul ul {
     /* Bloque */
     grid-area: boxFooter;
     color: whitesmoke;
-    margin-top: 10em; }
+    margin: 0.1em 0em; }
   .containerMobile .boxFooter--fondo {
     background-color: darkslateblue; }
 
