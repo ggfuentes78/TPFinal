@@ -14,20 +14,20 @@
   padding: 3em 3em; }
 
 html {
-  margin: 1em 5em;
-  padding: 1em 5em; }
+  margin: 0em 0em;
+  padding: 0em 0em; }
 
 body {
   /*Se define Color de la letra, fondo y tipografia para el body */
-  color: #060236;
-  background-color: #e7e7e7;
+  color: white;
+  background-color: #777777;
   font-family: "Montserrat", sans-serif;
-  margin: 1em 0.5em;
-  padding: 1em 0.5em; }
+  margin: 0em;
+  padding: 0em; }
 
 .navListaHorizontal {
   /* Comienzo del estilo del menu de navegacion */
-  background-color: darkslateblue;
+  background-color: #ffffff;
   display: inline-block;
   /*Hace que la lista se visualice horizontal*/
   padding: 5px;
@@ -43,7 +43,6 @@ body {
   padding: 0px 0px 0px 0px; }
 
 .menuNav__btn {
-  background-color: whitesmoke;
   padding: 0.5em 0.5em;
   margin: 0.5em 0.5em;
   border-radius: 0.5em; }
@@ -51,7 +50,7 @@ body {
 td {
   padding-left: 20px;
   padding-right: 20px;
-  border: whitesmoke;
+  border: #ffffff;
   border-style: solid; }
 
 .imgDerecha {
@@ -67,7 +66,7 @@ ul ul {
     padding: 5px 5px; }
 
 .tipoContacto {
-  background-color: rgba(35, 35, 82, 0.632);
+  background-color: #646464;
   padding: 1em 2em;
   margin: 0.5em 0.5em; }
 
@@ -97,7 +96,7 @@ ul ul {
     grid-template-rows: auto auto;
     grid-template-areas: "boxLogo boxMenu" "boxNav boxNav"; }
     .containerMobile .boxHeader .boxHeader--fondo {
-      background-color: darkslateblue; }
+      background-color: #ffffff; }
     .containerMobile .boxHeader .boxHeader__boxLogo {
       /* Contenedor para el logo */
       grid-area: boxLogo;
@@ -108,7 +107,7 @@ ul ul {
       grid-area: boxNav;
       width: 100%; }
     .containerMobile .boxHeader .boxHeader__boxNav--fondo {
-      background-image: linear-gradient(to bottom, darkslateblue, #e7e7e7); }
+      background-color: #ffffff; }
   .containerMobile .boxDestacados {
     /* Contenedor para seccion Destacados */
     grid-area: box1;
@@ -158,7 +157,9 @@ ul ul {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "boxTitulo ." "itemContacto1 itemContacto2" "itemContacto3 itemContacto4"; }
+    grid-template-areas: "boxTitulo boxTitulo" "itemContacto1 itemContacto2" "itemContacto3 itemContacto4"; }
+    .containerMobile .boxContacto .boxContacto__titulo {
+      grid-area: boxTitulo; }
     .containerMobile .boxContacto .boxContacto__itemContacto1Img {
       /* Contenedor para Consulta */
       grid-area: itemContacto1;
@@ -214,10 +215,12 @@ ul ul {
   .containerMobile .boxFooter {
     /* Bloque */
     grid-area: boxFooter;
-    color: whitesmoke;
-    margin: 0.1em 0em; }
+    color: #ffffff;
+    right: 0;
+    bottom: 0;
+    left: 0; }
   .containerMobile .boxFooter--fondo {
-    background-color: darkslateblue; }
+    background-color: #000000; }
 
 .seccionServiciosFlexBox {
   display: flex;
@@ -229,7 +232,7 @@ ul ul {
   justify-content: space-between; }
 
 .itemServicios {
-  background-color: rgba(35, 35, 82, 0.632);
+  background-color: #646464;
   padding: 10px 20px; }
 
 .contactoFlexBox {
@@ -330,8 +333,18 @@ ul ul {
 
 @media only screen and (min-width: 1024px) {
   /* Estilo para Pc de escritorio con pantalla horizontal */
+  /*html{
+        margin: 1em 2em;
+        padding: 1em 2em;
+    }*/
+  body {
+    /*Se define Color de la letra, fondo y tipografia para el body */
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    /*margin: 1em 0.5em;
+        padding: 1em 0.5em;*/ }
   .boxHeader--fondo {
-    background-image: linear-gradient(to bottom, darkslateblue, #e7e7e7); }
+    background-image: #ffffff; }
   .menuNav__btn {
     /* Comienzo del estilo del menu de navegacion */
     display: inline-block;
@@ -340,7 +353,6 @@ ul ul {
     width: 150px;
     text-align: center;
     /*position: relative;*/
-    background-color: whitesmoke;
     padding: 0.5em 0.5em; }
   /* Fin del estilo del menu de navegacion */
   .containerMobile {
@@ -360,12 +372,18 @@ ul ul {
         align-self: center;
         justify-self: center; }
     .containerMobile .boxDestacados {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 2 / 3;
       grid-column: 1 / 3; }
     .containerMobile .BoxGenerica1x1 {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 2 / 3;
       grid-column: 1 / 3; }
     .containerMobile .boxServicios {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 3 / 4;
       grid-column: 1 / 3;
       grid-template-columns: 1fr 1fr 1fr; }
@@ -391,6 +409,8 @@ ul ul {
         grid-row: 3 / 4;
         grid-column: 3 / 4; }
     .containerMobile .boxGaleria {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 3 / 4;
       grid-column: 1 / 3;
       grid-template-columns: 1fr 1fr 1fr; }
@@ -416,13 +436,15 @@ ul ul {
         grid-row: 3 / 4;
         grid-column: 3 / 4; }
     .containerMobile .boxContacto {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 4 / 5;
       grid-column: 1 / 3;
       align-content: center;
-      grid-template-columns: 1fr 1fr 1fr 1fr 20fr; }
+      grid-template-columns: 2fr 1fr 1fr 1fr 20fr; }
       .containerMobile .boxContacto .boxContacto__titulo {
         grid-row: 1 / 2;
-        grid-column: 1 / 5; }
+        grid-column: 1 / 6; }
       .containerMobile .boxContacto .boxContacto__itemContacto1Img {
         grid-row: 2 / 3;
         grid-column: 1 / 2;
@@ -464,11 +486,17 @@ ul ul {
         grid-column: 2 /6;
         margin: 0.3em 0em; }
     .containerMobile .boxUbicacion {
+      margin: 1em 3em 0.5em;
+      padding: 1em 3em 0.5em;
       grid-row: 5 / 6;
       grid-column: 1 / 3; }
     .containerMobile .boxFooter {
       grid-row: 6 / 7;
       grid-column: 1 / 3; } }
+
+.fondoTitulo {
+  background-color: #494949;
+  margin: 1.5rem 0rem; }
 
 .letraItalica {
   font-style: italic; }
@@ -505,8 +533,8 @@ ul ul {
 nav ul li a {
   text-decoration: none;
   /* Para que los links no se visualicen subrayados */
-  color: midnightblue;
-  /* Link color Azul en nav */ }
+  color: #494949;
+  /* Color del Link en el nav */ }
 
 a {
   /* Comienzo de estilo para los links */
@@ -516,19 +544,30 @@ a {
   /* Link color blanco */ }
 
 .letraOscura {
-  color: #060236; }
+  color: white; }
 
 .menuNav__btn--textoCentrado {
   text-align: center; }
 
+.menuNav__btn--colorTexto {
+  color: #494949; }
+
+.menuNav__btn--paginaActual {
+  text-decoration: overline underline; }
+
+.letraCalesita {
+  color: #ffffff;
+  background-color: #494949; }
+
 .resaltarItem:hover {
   /* Cambio color de fondo cuando se pasa por encima */
-  color: whitesmoke;
-  background-color: #232352; }
+  color: #ffffff;
+  background-color: #494949; }
 
 .menuNav__btn:hover {
   /* Cambia color del boton del nav cuando se pasar por encima */
-  background-color: cornflowerblue; }
+  background-color: #494949;
+  color: #ffffff; }
 
 .agrandarTexto:hover {
   /* Efecto para agrandar texto */

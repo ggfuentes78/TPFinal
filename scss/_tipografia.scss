@@ -32,7 +32,7 @@
 }
 nav ul li a{
     text-decoration: none; /* Para que los links no se visualicen subrayados */
-    color:midnightblue; /* Link color Azul en nav */
+    color:$colorFondoOscuro; /* Color del Link en el nav */
 }
 a{ /* Comienzo de estilo para los links */
     text-decoration: none; /* Para que los links no se visualicen subrayados */
@@ -43,4 +43,15 @@ a{ /* Comienzo de estilo para los links */
 }
 .menuNav__btn--textoCentrado{
     text-align: center;
+}
+
+.menuNav__btn--colorTexto{
+    color: $colorFondoOscuro;
+}
+.menuNav__btn--paginaActual{
+    text-decoration: overline underline;
+}
+.letraCalesita{
+    color: $blanco;
+    background-color: $colorFondoOscuro;
 }

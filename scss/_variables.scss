@@ -1,10 +1,11 @@
 $marginCero: 0px 0px 0px 0px;
 $paddingCero: 0px 0px 0px 0px;
-$blanco: whitesmoke;
-$colorFondo: rgb(231, 231, 231); /* color para el background */
-$colorFondoOscuro: darkslateblue;
-$colorBtn: rgba(35, 35, 82, 0.632); /* color para los botones y elementos resaltados */
-$colorLetra: rgb(6, 2, 54);
+$blanco: #ffffff;
+$colorFondo: rgb(119, 119, 119); /* color para el background */
+$colorFondoOscuro: rgb(73, 73, 73);
+$colorBtn: rgb(100, 100, 100); /* color para los botones y elementos resaltados */
+$colorLetra: rgb(255, 255, 255);
+$negro: #000000; 
 $fuente: 'Montserrat', sans-serif;
 $cantContenedores: 4; /* cantidad de bloques del grid */
 $cantItemsContacto: 4;

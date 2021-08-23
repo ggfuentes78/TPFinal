@@ -1,9 +1,10 @@
 .resaltarItem:hover{ /* Cambio color de fondo cuando se pasa por encima */
     color:$blanco;
-    background-color:rgb(35, 35, 82);
+    background-color:$colorFondoOscuro;
 }
 .menuNav__btn:hover{ /* Cambia color del boton del nav cuando se pasar por encima */
-    background-color: cornflowerblue;
+    background-color: $colorFondoOscuro;
+    color: $blanco;
 }
 .agrandarTexto:hover { /* Efecto para agrandar texto */
     transition: 2s;

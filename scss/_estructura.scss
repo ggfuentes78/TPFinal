@@ -1,16 +1,16 @@
 html{
-    margin: 1em 5em;
-    padding: 1em 5em;
+    margin: 0em 0em;
+    padding: 0em 0em;
 }
 body{ /*Se define Color de la letra, fondo y tipografia para el body */
     color: $colorLetra;
     background-color: $colorFondo;
     font-family: $fuente;
-    margin: 1em 0.5em;
-    padding: 1em 0.5em;
+    margin: 0em;
+    padding: 0em;
 }
 .navListaHorizontal{ /* Comienzo del estilo del menu de navegacion */
-    background-color:$colorFondoOscuro;
+    background-color:$blanco;
     display: inline-block; /*Hace que la lista se visualice horizontal*/
     padding: 5px;
     margin: 5px 15px;
@@ -23,7 +23,6 @@ body{ /*Se define Color de la letra, fondo y tipografia para el body */
     padding: $paddingCero;
 }
 .menuNav__btn{
-    background-color: $blanco;
     padding: 0.5em 0.5em;
     margin: 0.5em 0.5em;
     border-radius: 0.5em;
@@ -82,7 +81,7 @@ ul ul{
             "boxLogo boxMenu"
             "boxNav boxNav";
         .boxHeader--fondo{
-                background-color: $colorFondoOscuro
+                background-color: $blanco;
         }
         .boxHeader__boxLogo{ /* Contenedor para el logo */
             grid-area: boxLogo;
@@ -94,7 +93,7 @@ ul ul{
             width: 100%;
         }
         .boxHeader__boxNav--fondo{
-            background-image: linear-gradient(to bottom, $colorFondoOscuro,$colorFondo);
+            background-color: $blanco;
         }
     }
     .boxDestacados{ /* Contenedor para seccion Destacados */
@@ -140,9 +139,12 @@ ul ul{
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto auto;
         grid-template-areas:
-            "boxTitulo ."
+            "boxTitulo boxTitulo"
             "itemContacto1 itemContacto2"
             "itemContacto3 itemContacto4";
+            .boxContacto__titulo{
+                grid-area: boxTitulo;
+            }
         @for $i from 1 through $cantItemsContacto {
             .boxContacto__itemContacto#{$i}Img{ /* Contenedor para Consulta */
             grid-area: itemContacto#{$i}; padding: 1em 1em;}
@@ -177,10 +179,13 @@ ul ul{
     .boxFooter{ /* Bloque */
         grid-area: boxFooter;
         color:$blanco;
-        margin: 0.1em 0em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
     }
     .boxFooter--fondo{
-        background-color: $colorFondoOscuro;
+        background-color: $negro;
         }
     
 }
@@ -285,8 +290,18 @@ ul ul{
     }
 }
 @media only screen and (min-width: 1024px) { /* Estilo para Pc de escritorio con pantalla horizontal */
-	.boxHeader--fondo{
-        background-image: linear-gradient(to bottom, $colorFondoOscuro,$colorFondo);
+	/*html{
+        margin: 1em 2em;
+        padding: 1em 2em;
+    }*/
+    body{ /*Se define Color de la letra, fondo y tipografia para el body */
+        color: $colorLetra;
+        font-family: $fuente;
+        /*margin: 1em 0.5em;
+        padding: 1em 0.5em;*/
+    }
+    .boxHeader--fondo{
+        background-image: $blanco;
     }
     .menuNav__btn{ /* Comienzo del estilo del menu de navegacion */
         display: inline-block; /*Hace que la lista se visualice horizontal*/
@@ -294,7 +309,6 @@ ul ul{
         width: 150px;
         text-align: center;
         /*position: relative;*/
-        background-color: $blanco;
         padding: 0.5em 0.5em;
     } /* Fin del estilo del menu de navegacion */
     .containerMobile {
@@ -318,14 +332,20 @@ ul ul{
             }    
         }
         .boxDestacados {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
         .BoxGenerica1x1 {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
         .boxServicios {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 3 / 4;
             grid-column: 1 / 3;
             grid-template-columns: 1fr 1fr 1fr;
@@ -343,6 +363,8 @@ ul ul{
             }    
         }
         .boxGaleria {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 3 / 4;
             grid-column: 1 / 3;
             grid-template-columns: 1fr 1fr 1fr;
@@ -360,13 +382,15 @@ ul ul{
             }   
         }
         .boxContacto {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 4 / 5;
             grid-column: 1 / 3;
             align-content: center;
-            grid-template-columns: 1fr 1fr 1fr 1fr 20fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr 20fr;
             .boxContacto__titulo{
                 grid-row: 1 / 2;
-                grid-column: 1 / 5;
+                grid-column: 1 / 6;
             }
             @for $i from 1 through $cantItemsContacto {
                 .boxContacto__itemContacto#{$i}Img{ grid-row: #{$i+1} / #{$i+2}; grid-column: 1 / 2; padding: 0em 1em; margin: 0.3em 0em;}
@@ -374,6 +398,8 @@ ul ul{
             }
         }
         .boxUbicacion {
+            margin: 1em 3em 0.5em;
+            padding: 1em 3em 0.5em;
             grid-row: 5 / 6;
             grid-column: 1 / 3;
         }
@@ -382,4 +408,8 @@ ul ul{
             grid-column: 1 / 3;
         }
     }
+}
+.fondoTitulo{
+    background-color: $colorFondoOscuro;
+    margin: 1.5rem 0rem;
 }
