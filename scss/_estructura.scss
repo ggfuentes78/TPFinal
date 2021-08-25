@@ -97,7 +97,7 @@ ul ul{
         }
     }
     .boxDestacados{ /* Contenedor para seccion Destacados */
-        margin-top: 4em;
+        margin: 4rem 1rem -4rem;
         grid-area: box1;
         grid-template-rows: auto auto;
         grid-template-areas:
@@ -110,11 +110,14 @@ ul ul{
             grid-area: boxItems;
         }
     }
-    .BoxGenerica1x1{ /* Contenedor generico para contenido simple (1x1) */
+    .boxGenerica1x1{ /* Contenedor generico para contenido simple (1x1) */
+        margin: 4rem 1rem 0.3rem;
         grid-area: box1;
+        display: grid;
     }
     /* Grid para Servicios */
     .boxServicios{ /* Bloque */
+        margin: 4rem 1rem 0.3rem;
         grid-area: box2; 
         display: grid;
         grid-template-columns: 100%;
@@ -135,6 +138,7 @@ ul ul{
     }
     /* Grid para seccion Contacto */
     .boxContacto{ /* Bloque */
+        margin: 0rem 1rem 0.3rem;
         grid-area: box3;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -154,11 +158,12 @@ ul ul{
         }
     }
     .boxUbicacion{
+        margin: 0rem 1rem 0.3rem;
         grid-area: box4;
     }
     /* Grid para seccion Galeria */
     .boxGaleria{ /* Bloque */
-        margin: 4rem 1rem;
+        margin: 4rem 1rem 0.3rem;
         grid-area: box1;
         display: grid;
         grid-template-columns: 100%;
@@ -299,7 +304,7 @@ ul ul{
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
-        .BoxGenerica1x1 {
+        .boxGenerica1x1 {
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
@@ -348,6 +353,51 @@ ul ul{
             grid-row: 6 / 7;
             grid-column: 1 / 3;
         }
+        .boxFormContacto{
+            grid-row: 3 / 4;
+            grid-column: 1 / 3;
+            grid-template-columns: 1fr 1fr;
+            .boxFormContacto__titulo{
+                grid-row: 1 / 2;
+                grid-column: 1 / 3;
+            }
+            .boxFormContacto__item1{
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+            .boxFormContacto__item2{
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+            .boxFormContacto__item3{
+                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+            }
+            .boxFormContacto__item4{
+                grid-row: 3 / 4;
+                grid-column: 2 / 3;
+            }
+            .boxFormContacto__item5{
+                grid-row: 4 / 5;
+                grid-column: 1 / 2;
+            }
+            .boxFormContacto__item6{
+                grid-row: 4 / 5;
+                grid-column: 2 / 3;
+            }
+            .boxFormContacto__item7{
+                grid-row: 5 / 6;
+                grid-column: 1 / 2;
+            }
+            .boxFormContacto__item8{
+                grid-row: 5 / 6;
+                grid-column: 2 / 3;
+            }
+            .boxFormContacto__item9{
+                grid-row: 6 / 7;
+                grid-column: 1 / 2;
+            }
+        }
     }
 }
 @media only screen and (min-width: 1024px) { /* Estilo para Pc de escritorio con pantalla horizontal */
@@ -387,19 +437,19 @@ ul ul{
             }    
         }
         .boxDestacados {
-            margin: 4em 3em 0.5em;
+            margin: 4em 3em -4em;
             padding: 1em 3em 0.5em;
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
-        .BoxGenerica1x1 {
+        .boxGenerica1x1 {
             margin: 1em 3em 0.5em;
             padding: 1em 3em 0.5em;
             grid-row: 2 / 3;
             grid-column: 1 / 3;
         }
         .boxServicios {
-            margin: 1em 3em 0.5em;
+            margin: 4em 3em 0.5em;
             padding: 1em 3em 0.5em;
             grid-row: 3 / 4;
             grid-column: 1 / 3;
@@ -452,6 +502,12 @@ ul ul{
                 .boxContacto__itemContacto#{$i}Texto{display: block; grid-row: #{$i+1} / #{$i+2}; grid-column: 2 /6; margin: 0.3em 0em;}  
             }
         }
+        .boxGenerica1x1{
+            margin: 4em 3em 0.5em;
+            padding: 1em 3em 0.5em;
+            grid-row: 4 / 5;
+            grid-column: 1 / 3;  
+        }
         .boxUbicacion {
             margin: 1em 3em 0.5em;
             padding: 1em 3em 0.5em;
@@ -461,49 +517,7 @@ ul ul{
         .boxFormContacto{
             margin: 4em 3em 0.5em;
             padding: 1em 3em 0.5em;
-            grid-row: 3 / 4;
-            grid-column: 1 / 3;
-            grid-template-columns: 1fr 3fr;
-            .boxFormContacto__titulo{
-                grid-row: 1 / 2;
-                grid-column: 1 / 3;
-            }
-            .boxFormContacto__item1{
-                grid-row: 2 / 3;
-                grid-column: 1 / 2;
-            }
-            .boxFormContacto__item2{
-                grid-row: 2 / 3;
-                grid-column: 2 / 3;
-            }
-            .boxFormContacto__item3{
-                grid-row: 3 / 4;
-                grid-column: 1 / 2;
-            }
-            .boxFormContacto__item4{
-                grid-row: 3 / 4;
-                grid-column: 2 / 3;
-            }
-            .boxFormContacto__item5{
-                grid-row: 4 / 5;
-                grid-column: 1 / 2;
-            }
-            .boxFormContacto__item6{
-                grid-row: 4 / 5;
-                grid-column: 2 / 3;
-            }
-            .boxFormContacto__item7{
-                grid-row: 5 / 6;
-                grid-column: 1 / 2;
-            }
-            .boxFormContacto__item8{
-                grid-row: 5 / 6;
-                grid-column: 2 / 3;
-            }
-            .boxFormContacto__item9{
-                grid-row: 6 / 7;
-                grid-column: 1 / 2;
-            }
+            grid-template-columns: 1fr 2fr;
         }
         .boxFooter {
             padding: 1em 8em 0.5em;
@@ -519,4 +533,7 @@ ul ul{
 p{
     margin-top: 0.3rem;
     margin-bottom: 0rem;
+}
+.margenInicial{
+    margin-top: 2em;
 }
