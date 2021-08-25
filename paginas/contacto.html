@@ -44,58 +44,77 @@
       </nav>
 <!-- Fin Barra de Navegacion-->
 </header> <!-- Fin del header -->
-    <section class="boxGenerica1x1"> <!-- Seccion "Contacto"-->
-            <h1>Contacto</h1>
-            <form method="POST" enctype="application/x-www-form-urlencoded"> <!-- Inicio Formulario de contacto-->
-                <p>Nombre</p>
-                <input name="name" class="inputTranf">
-                <p>Apellido</p>
-                <input name="apellido" class="inputTranf">
-                <p>Correo electronico</p>
-                <input name="mail" class="inputTranf">
-                <p>Telefono</p>
-                <input name="tel" class="inputTranf">
-                <p>Tipo de Consulta</p>
-                <select name="tipo_consulta" id="tipo_cons">
+    <form method="POST" enctype="application/x-www-form-urlencoded" class="boxFormContacto"> <!-- Inicio Formulario de contacto-->
+                <div class="boxFormContacto__titulo">    
+                  <h1 class="textoCentrado fondoTitulo">Contacto</h1>
+                </div>
+                <div class="boxFormContacto__item1">
+                  <p>Nombre</p>
+                  <input name="name" class="form-control inputTranf">
+                </div>
+                <div class="boxFormContacto__item2">
+                  <p>Apellido</p>
+                  <input name="apellido" class="form-control inputTranf">
+                </div>
+                <div class="boxFormContacto__item3">
+                  <p>Correo electronico</p>
+                  <input name="mail" class="form-control inputTranf">
+                </div>
+                <div class="boxFormContacto__item4">
+                  <p>Telefono</p>
+                  <input name="tel" class="form-control inputTranf">
+                </div>
+                <div class="boxFormContacto__item5">
+                  <p>Tipo de Consulta</p>
+                  <select name="tipo_consulta" id="tipo_cons" class="form-select inputTranf">
                     <option value="C">Compra</option>
                     <option value="V">Venta</option>
                     <option value="G">Gestoria</option>
                     <option value="F">Financiacion</option>
                     <option value="O">Otra</option>
-                </select>
-                <p>Consulta</p>
-                <textarea name="consulta" id="txt_cons" cols="30" rows="10" class="inputTranf"></textarea>
-                <p> <input type="checkbox" name="envia_mail"> Deseo recibir novedades por mail</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  </select>
+                </div>
+                <div class="boxFormContacto__item7">
+                  <p>Consulta</p>
+                  <textarea name="consulta" id="txt_cons" cols="30" rows="10" class="form-control inputTranf"></textarea>
+                </div>
+                <div class="boxFormContacto__item9">
+                  <p> <input type="checkbox" name="envia_mail"> Deseo recibir novedades por mail</p>
+                  <button type="button" class="btn btn-primary boxFormConsulta__btn--color" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Enviar Consulta
-                </button><!-- Button trigger modal -->
-                <input type="reset" class="btn btn-primary" value="Borrar formulario">
-            </form> <!-- fin de formulario de contacto-->
+                  </button><!-- Button trigger modal -->
+                  <input type="reset" class="btn btn-primary boxFormConsulta__btn--color" value="Borrar formulario">
+                </div>
+    </form> <!-- fin de formulario de contacto-->
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title letraOscura" id="staticBackdropLabel">Gracias por su consulta!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title letraOscura" id="staticBackdropLabel">Gracias por su consulta!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body letraOscura">
+                    Nos pondremos en contacto a la brevedad
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary boxFormConsulta__btn--color"><a href="../index.html">Volver al inicio</a></button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="modal-body letraOscura">
-                Nos pondremos en contacto a la brevedad
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-primary"><a href="../index.html">Volver al inicio</a></button>
-            </div>
-            </div>
-            </div>
-            </div>
-    </section>
-    <footer class="boxFooter boxFooter--fondo boxFooter--letraS"> <!-- Comienzo footer-->
-        <h5 class="letraItalica">2021 - Todos los derechos reservados</h5>
+     <footer class="boxFooter boxFooter--fondo boxFooter--letraS"> <!-- Comienzo footer-->
+        <h5 class="boxFooter__legales textoCentrado letraItalica">2021 - Todos los derechos reservados</h5>
+        <section class="boxFooter__redes">    
             <a href="http://www.facebook.com"> <img src="../img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
             <a href="http://www.twitter.com"><img src="../img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
             <a href="http://www.instagram.com"><img src="../img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
+        </section>
+        <section class="boxFooter__datosNegocio">
+            <img src="../img/logo_inv.png" alt="Logo Fuentes Automotores">
             <p><strong>Tel:</strong> 4912-0084</p>
             <p><strong>Direccion:</strong> Av. Brasil 3299, Parque Patricios (Capital Federal)</p>
+        </section>
     </footer> <!-- Fin footer--> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

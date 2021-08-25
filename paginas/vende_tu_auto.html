@@ -44,18 +44,112 @@
           </nav>
     <!-- Fin Barra de Navegacion-->
     </header> <!-- Fin del header -->
-    <section class="boxGenerica1x1"> <!--Seccion "Vende tu auto"-->
-            <h1>Vende tu usado</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita inventore cumque natus tempore architecto? Quibusdam veritatis tempora, voluptatibus architecto ratione assumenda expedita vero consectetur, quas amet ab, iusto recusandae illum?</p>
-    </section>
+    <form method="POST" enctype="application/x-www-form-urlencoded" class="boxFormContacto letraOscura"> <!-- Inicio Formulario de contacto-->
+      <div class="boxFormContacto__titulo">    
+        <h1 class="textoCentrado fondoTitulo colorLetra">Cotizá tu auto</h1>
+      </div>
+      <div class="boxFormContacto__item1 form-floating">
+        <select name="año" id="año" class="form-select inputTranf" aria-label="ejemplo">
+          <option value="10">2010</option>
+          <option value="11">2011</option>
+          <option value="12">2012</option>
+          <option value="13">2013</option>
+          <option value="14">2014</option>
+          <option value="15">2015</option>
+          <option value="16">2016</option>
+          <option value="17">2017</option>
+          <option value="18">2018</option>
+          <option value="19">2019</option>
+          <option value="20">2020</option>
+          <option value="21">2021</option>
+        </select>
+        <label for="año">Año</label>
+      </div>
+      <div class="boxFormContacto__item2 form-floating">
+        <select name="marca" id="marca" class="form-select inputTranf">
+          <option value="A">Audi</option>
+          <option value="C">Citroën</option>
+          <option value="D">Chevrolet</option>
+          <option value="F">Fiat</option>
+          <option value="G">Ford</option>
+          <option value="H">Hyundai</option>
+          <option value="J">Jeep</option>
+          <option value="P">Peugeot</option>
+          <option value="R">Renault</option>
+        </select>
+        <label for="marca">Marca</label>
+      </div>
+      <div class="boxFormContacto__item3 form-floating">
+        <input name="modelo" id="modelo" class="form-control inputTranf">
+        <label for="modelo">Modelo</label>
+      </div>
+      <div class="boxFormContacto__item4 form-floating">
+        <select name="combustible" id="combustible" class="form-select inputTranf">
+          <option value="N">Nafta</option>
+          <option value="D">Diesel</option>
+          <option value="G">GNC</option>
+          <option value="E">Eléctrico</option>
+          <option value="H">Híbrido</option>
+        </select>
+        <label for="combustible">Combustible</label>
+      </div>
+      <div class="boxFormContacto__item5 form-floating">
+        <select name="transmision" id="transmision" class="form-select inputTranf">
+          <option value="M">Manual</option>
+          <option value="A">Automatico</option>
+          <option value="S">Secuencial</option>
+        </select>
+        <label for="transmision">Transmisión</label>
+      </div>
+      <div class="boxFormContacto__item6 form-floating">
+        <input name="km" id="km" class="form-control inputTranf">
+        <label for="km">Kilometraje</label>
+      </div>
+      <div class="boxFormContacto__item7 form-floating">
+        <input name="tel" id="tel" class="form-control inputTranf">
+        <label for="tel">Telefono</label>
+      </div>
+      <div class="boxFormContacto__item8 form-floating">
+        <input name="mail" id="mail" class="form-control inputTranf">
+        <label for="mail">Correo electrónico</label>
+      </div>
+      <div class="boxFormContacto__item9">
+        <button type="button" class="btn btn-primary boxFormConsulta__btn--color" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Cotizar
+        </button><!-- Button trigger modal -->
+        <input type="reset" class="btn btn-primary boxFormConsulta__btn--color" value="Borrar">
+      </div>
+</form> <!-- fin de formulario de contacto-->
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title letraOscura" id="staticBackdropLabel">Gracias por su consulta!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body letraOscura">
+          Le enviaremos la cotización a la brevedad
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary boxFormConsulta__btn--color"><a href="../index.html">Volver al Inicio</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
     <footer class="boxFooter boxFooter--fondo boxFooter--letraS"> <!-- Comienzo footer-->
-        <h5 class="letraItalica">2021 - Todos los derechos reservados</h5>
-            <a href="http://www.facebook.com"> <img src="../img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
-            <a href="http://www.twitter.com"><img src="../img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
-            <a href="http://www.instagram.com"><img src="../img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
-            <p><strong>Tel:</strong> 4912-0084</p>
-            <p><strong>Direccion:</strong> Av. Brasil 3299, Parque Patricios (Capital Federal)</p>
-    </footer> <!-- Fin footer-->
+      <h5 class="boxFooter__legales textoCentrado letraItalica">2021 - Todos los derechos reservados</h5>
+      <section class="boxFooter__redes">    
+          <a href="http://www.facebook.com"> <img src="../img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
+          <a href="http://www.twitter.com"><img src="../img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
+          <a href="http://www.instagram.com"><img src="../img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
+      </section>
+      <section class="boxFooter__datosNegocio">
+          <img src="../img/logo_inv.png" alt="Logo Fuentes Automotores">
+          <p><strong>Tel:</strong> 4912-0084</p>
+          <p><strong>Direccion:</strong> Av. Brasil 3299, Parque Patricios (Capital Federal)</p>
+      </section>
+    </footer> <!-- Fin footer--> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

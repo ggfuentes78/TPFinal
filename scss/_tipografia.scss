@@ -39,6 +39,9 @@ a{ /* Comienzo de estilo para los links */
     color:white; /* Link color blanco */
 }
 .letraOscura{
+    color: $negro;
+}
+.colorLetra{
     color: $colorLetra;
 }
 .menuNav__btn--textoCentrado{
@@ -49,9 +52,18 @@ a{ /* Comienzo de estilo para los links */
     color: $colorFondoOscuro;
 }
 .menuNav__btn--paginaActual{
-    text-decoration: overline underline;
+    background-color: $colorFondoOscuro;
+    color: $blanco;
 }
 .letraCalesita{
     color: $blanco;
     background-color: $colorFondoOscuro;
+    padding:0rem 0rem; 
+    margin: 0rem 0rem; 
+}
+.boxFormConsulta__btn--color{
+    margin: 0.5rem 0.1rem;
+    background-color: $colorFondoOscuro;
+    color: $blanco;
+    border-color: $colorFondoOscuro
 }

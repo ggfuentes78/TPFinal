@@ -11,11 +11,20 @@
     font-size: 1.1rem;
 }
 .inputTranf{
+    margin-top: 0.3rem;
     width: 15em;
     transition: all 1s;
 }
 .inputTranf:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
     width: 15em;
+    font-size: 1.1em;
+}
+.inputTranfL{
+    width: 30em;
+    transition: all 1s;
+}
+.inputTranfL:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
+    width: 30em;
     font-size: 1.1em;
 }
 .efectoAgrandar:hover{ /* Efecto para agrandar contenidos */ 
@@ -24,4 +33,11 @@
 }
 ul li:hover ul{
     display: block;
+}
+.imgRedonda{ /* hace que una imagen sea circular*/
+    border-radius: 50%;
+}
+.boxFormConsulta__btn--color:hover{
+    background-color: rgb(32, 32, 32) ;
+    border-color:rgb(32, 32, 32) ;
 }
