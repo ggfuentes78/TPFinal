@@ -87,6 +87,9 @@ ul li:hover ul{
 button a:hover{
     color: $blanco;
 }
+h4 a:hover{
+    color: $blanco;
+}
 @media only screen and (min-width: 768px) {
     .inputTranfL{
         width: 40rem;
