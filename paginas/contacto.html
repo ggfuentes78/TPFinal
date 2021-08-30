@@ -24,20 +24,20 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav navUl">
-              <li class="nav-item">
-                <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="galeria.html">Galería</a>
+              <li class="nav-item menuNav__btn--textoCentrado">
+                <a class="menuNav__btn menuNav__btn--colorTexto" href="galeria.html">Galería</a>
               </li>
-              <li class="nav-item">
-                <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="vende_tu_auto.html">Vendé tu Auto</a>
+              <li class="nav-item menuNav__btn--textoCentrado">
+                <a class="menuNav__btn menuNav__btn--colorTexto" href="vende_tu_auto.html">Vendé tu Auto</a>
               </li>
-              <li class="nav-item">
-                <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="servicios.html">Servicios</a>
+              <li class="nav-item menuNav__btn--textoCentrado">
+                <a class="menuNav__btn menuNav__btn--colorTexto" href="servicios.html">Servicios</a>
               </li>
-              <li class="nav-item">
-                <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="nosotros.html">Nosotros</a>
+              <li class="nav-item menuNav__btn--textoCentrado">
+                <a class="menuNav__btn menuNav__btn--colorTexto" href="nosotros.html">Nosotros</a>
               </li>
-              <li class="nav-item">
-                <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto menuNav__btn--paginaActual" href="contacto.html">Contacto</a>
+              <li class="nav-item menuNav__btn--textoCentrado">
+                <a class="menuNav__btn menuNav__btn--colorTexto menuNav__btn--paginaActual" href="contacto.html">Contacto</a>
               </li>
             </ul>
           </div>
@@ -47,26 +47,25 @@
 </header> <!-- Fin del header -->
     <form method="POST" enctype="application/x-www-form-urlencoded" class="boxFormContacto"> <!-- Inicio Formulario de contacto-->
                 <div class="boxFormContacto__titulo">    
-                  <h1 class="textoCentrado fondoTitulo">Contacto</h1>
+                  <h1 class="textoCentrado colorLetra fondoTitulo">Contacto</h1>
                 </div>
-                <div class="boxFormContacto__item1">
-                  <p>Nombre</p>
-                  <input name="name" class="form-control inputTranf">
+                <div class="boxFormContacto__item1 form-floating">
+                  <input name="name" id="name" class="form-control inputTranf">
+                  <label for="name">Nombre</label>
                 </div>
-                <div class="boxFormContacto__item2">
-                  <p>Apellido</p>
-                  <input name="apellido" class="form-control inputTranf">
+                <div class="boxFormContacto__item2 form-floating">
+                  <input name="apellido" id="apellido" class="form-control inputTranf">
+                  <label for="apellido">Apellido</label>
                 </div>
-                <div class="boxFormContacto__item3">
-                  <p>Correo electronico</p>
-                  <input name="mail" class="form-control inputTranf">
+                <div class="boxFormContacto__item3 form-floating">
+                  <input name="mail" id="mail" class="form-control inputTranf">
+                  <label for="mail">Correo electrónico</label>
                 </div>
-                <div class="boxFormContacto__item4">
-                  <p>Telefono</p>
-                  <input name="tel" class="form-control inputTranf">
+                <div class="boxFormContacto__item4 form-floating">
+                  <input name="tel" id="tel" class="form-control inputTranf">
+                  <label for="tel">Teléfono</label>
                 </div>
-                <div class="boxFormContacto__item5">
-                  <p>Tipo de Consulta</p>
+                <div class="boxFormContacto__item10 form-floating">
                   <select name="tipo_consulta" id="tipo_cons" class="form-select inputTranf">
                     <option value="C">Compra</option>
                     <option value="V">Venta</option>
@@ -74,13 +73,14 @@
                     <option value="F">Financiacion</option>
                     <option value="O">Otra</option>
                   </select>
+                  <label for="tipo_cons">Tipo de consulta</label>
                 </div>
-                <div class="boxFormContacto__item7">
-                  <p>Consulta</p>
-                  <textarea name="consulta" id="txt_cons" cols="30" rows="10" class="form-control inputTranf"></textarea>
+                <div class="boxFormContacto__item11 form-floating">
+                  <textarea name="consulta" id="txt_cons" class="inputTranfL form-control"></textarea>
+                  <label for="txt_cons">Consulta</label>
                 </div>
-                <div class="boxFormContacto__item9">
-                  <p> <input type="checkbox" name="envia_mail"> Deseo recibir novedades por mail</p>
+                <div class="boxFormContacto__item9 form-floating">
+                  <p class="colorLetra"> <input type="checkbox" name="envia_mail"> Deseo recibir novedades por mail</p>
                   <button type="button" class="btn btn-primary boxFormConsulta__btn--color" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Enviar Consulta
                   </button><!-- Button trigger modal -->
@@ -107,12 +107,12 @@
      <footer class="boxFooter boxFooter--fondo boxFooter--letraS"> <!-- Comienzo footer-->
         <h5 class="boxFooter__legales textoCentrado letraItalica">2021 - Todos los derechos reservados</h5>
         <section class="boxFooter__redes">    
-            <a href="http://www.facebook.com"> <img src="../img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
-            <a href="http://www.twitter.com"><img src="../img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
-            <a href="http://www.instagram.com"><img src="../img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
+          <a href="http://www.facebook.com/alejandro.fuentes.39750" target="_blank"> <img src="../img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
+          <a href="http://www.twitter.com" target="_blank"><img src="../img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
+          <a href="http://www.instagram.com/bebotefuentes/" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
         </section>
         <section class="boxFooter__datosNegocio">
-            <img src="../img/logo_inv.png" alt="Logo Fuentes Automotores">
+            <a href="../index.html"><img src="../img/logo_inv.png" alt="Logo Fuentes Automotores"></a>
             <p><strong>Tel:</strong> 4912-0084</p>
             <p><strong>Direccion:</strong> Av. Brasil 3299, Parque Patricios (Capital Federal)</p>
         </section>

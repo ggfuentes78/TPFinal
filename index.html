@@ -16,7 +16,7 @@
 </head> 
 <body class="containerMobile letraNormal"> <!-- Comienzo del body -->
     <header class="boxHeader boxHeader--fondo" id="encabezado"> <!-- Comienzo del header -->
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light boxHeader__boxNav boxHeader__boxNav--fondo"> <!-- Comienzo de Barra de Navegacion Burguer para mobile -->
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light boxHeader__boxNav boxHeader__boxNav--fondo textoCentrado"> <!-- Comienzo de Barra de Navegacion Burguer para mobile -->
                 <div class="container-fluid">
                 <a href="index.html"><img src="img/logo.png" alt="Fuentes Automotores"></a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,20 +24,20 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav menuNav">
-                      <li class="nav-item">
-                        <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="paginas/galeria.html">Galería</a>
+                      <li class="nav-item menuNav__btn--textoCentrado">
+                        <a class="menuNav__btn menuNav__btn--colorTexto" href="paginas/galeria.html">Galería</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="paginas/vende_tu_auto.html">Vendé tu Auto</a>
+                      <li class="nav-item menuNav__btn--textoCentrado">
+                        <a class="menuNav__btn menuNav__btn--colorTexto" href="paginas/vende_tu_auto.html">Vendé tu Auto</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="paginas/servicios.html">Servicios</a>
+                      <li class="nav-item menuNav__btn--textoCentrado">
+                        <a class="menuNav__btn menuNav__btn--colorTexto" href="paginas/servicios.html">Servicios</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="paginas/nosotros.html">Nosotros</a>
+                      <li class="nav-item menuNav__btn--textoCentrado">
+                        <a class="menuNav__btn menuNav__btn--colorTexto" href="paginas/nosotros.html">Nosotros</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="menuNav__btn menuNav__btn--textoCentrado menuNav__btn--colorTexto" href="paginas/contacto.html">Contacto</a>
+                      <li class="nav-item menuNav__btn--textoCentrado">
+                        <a class="menuNav__btn menuNav__btn--colorTexto" href="paginas/contacto.html">Contacto</a>
                       </li>
                     </ul>
                   </div>
@@ -46,18 +46,18 @@
         <!-- Fin Barra de Navegacion-->
     </header> <!-- Fin del header -->
     <section class="boxDestacados"> <!--Comienzo seccion "Destacados"-->
-            <div id="carouselExampleCaptions" class="carousel slide boxDestacados__contenido" data-bs-ride="carousel"> <!-- Carousel de seccion Destacados -->
+            <div id="carouselDestacados" class="carousel slide boxDestacados__contenido margenTitulo" data-bs-ride="carousel"> <!-- Carousel de seccion Destacados -->
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselDestacados" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselDestacados" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselDestacados" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <a href="paginas/galeria.html">
                       <img src="img/banner1.jpg" class="d-block w-100" alt="Galería">
                       <div class="carousel-caption d-none d-md-block colorLetra">
-                        <h1 class="letraCalesita">Galería</h1>
+                        <h2 class="letraCalesita">Galería</h2>
                           <p class="letraCalesita">Encontrá el auto que estás buscando</p>
                       </div>
                     </a>
@@ -66,7 +66,7 @@
                     <a href="paginas/servicios.html">
                       <img src="img/banner3.jpg" class="d-block w-100" alt="Créditos">
                       <div class="carousel-caption d-none d-md-block colorLetra">
-                        <h1 class="letraCalesita">La mejor financiación</h1>
+                        <h2 class="letraCalesita">La mejor financiación</h2>
                           <p class="letraCalesita">Todas las facilidades para que tengas tu próximo auto</p>
                       </div>
                     </a>
@@ -75,47 +75,56 @@
                     <a href="paginas/vende_tu_auto.html">
                       <img src="img/banner2.jpg" class="d-block w-100" alt="Vendé tu Auto">
                       <div class="carousel-caption d-none d-md-block colorLetra">
-                        <h1  class="letraCalesita">Vendemos tu auto</h5>
+                        <h2  class="letraCalesita">Vendemos tu auto</h2>
                           <p class="letraCalesita">Publicá tu auto, nosotros te lo vendemos</p>
                       </div>
                     </a>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestacados" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDestacados" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Siguiente</span>
                 </button>
               </div>
-    </section>        
-    <section class="boxServicios"> <!--Seccion "Servicios"-->
+    </section>
+    <section class="boxTitulo">
+      <h1 class="textoCentrado margenTitulo letraNegrita">FUENTES AUTOMOTORES</h1>        
+    </section>
+      <section class="boxServicios"> <!--Seccion "Servicios"-->
         <h2 class="boxServicios__titulo textoCentrado fondoTitulo">Servicios</h2>
             <div class="boxServicios__boxItem1 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Gestoría<img src="img/servicios1.jpg" alt="Gestoria" width="100%" class="imgRedonda"></h3>
-                    <p class="textoCentrado">Hacemos todos los trámites por vos</p>
+                <h3 class="textoCentrado">Gestoría</h3>
+                <a href="paginas/servicios.html#gestoria"><img src="img/servicios1.jpg" alt="Gestoria" width="100%" class="imgRedonda"></a>  
+                    <h5 class="textoCentrado">Hacemos todos los trámites por vos</h5>
             </div>
             <div class="boxServicios__boxItem2 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Vendé tu Auto!</h3><img src="img/servicios5.jpg" alt="Vendé tu auto" width="100%"class="imgRedonda">
-                    <p class="textoCentrado">Traenos tu auto, nosotros te lo vendemos</p>
+                <h3 class="textoCentrado">Vendé tu Auto!</h3>
+                <a href="paginas/vende_tu_auto.html"><img src="img/servicios5.jpg" alt="Vendé tu auto" width="100%"class="imgRedonda"></a>
+                    <h5 class="textoCentrado">Traenos tu auto, nosotros te lo vendemos</h5>
             </div>
             <div class="boxServicios__boxItem3 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Financiación<img src="img/servicios6.jpg" alt="La mejor financiación" width="100%"class="imgRedonda"></h3>
-                    <p class="textoCentrado">Todas las facilidades para llegar a tu próximo auto</p>
+                <h3 class="textoCentrado">Financiación</h3>
+                <a href="paginas/servicios.html#financiacion"><img src="img/servicios6.jpg" alt="La mejor financiación" width="100%"class="imgRedonda"></a>
+                    <h5 class="textoCentrado">Todas las facilidades para llegar a tu próximo auto</h5>
             </div>
             <div class="boxServicios__boxItem4 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Venta<img src="img/servicios4.jpg" alt="Venta de autos" width="100%"class="imgRedonda"></h3>
-                    <p class="textoCentrado">Tenemos el auto que buscas</p>
+                <h3 class="textoCentrado">Venta</h3>
+                <a href="paginas/galeria.html"><img src="img/servicios4.jpg" alt="Venta de autos" width="100%"class="imgRedonda"></a>
+                    <h5 class="textoCentrado">Tenemos el auto que buscas</h5>
             </div>
             <div class="boxServicios__boxItem5 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Compra<img src="img/servicios3.jpg" alt="Compramos tu auto" width="100%"class="imgRedonda"></h3>
-                    <p class="textoCentrado">Compramos tu auto</p>
+                <h3 class="textoCentrado">Compra</h3>
+                <a href="paginas/servicios.html#compra"><img src="img/servicios3.jpg" alt="Compramos tu auto" width="100%"class="imgRedonda"></a>
+                    <h5 class="textoCentrado">Compramos tu auto</h5>
             </div>
             <div class="boxServicios__boxItem6 resaltarItem agrandarTexto">
-                <h3 class="textoCentrado">Permutas<img src="img/servicios7.jpg" alt="Permutas" width="100%"class="imgRedonda"></h3>
-                    <p class="textoCentrado">Tomamos tu usado en parte de pago</p>
+                <h3 class="textoCentrado">Permutas</h3>
+                <a href="paginas/servicios.html#permutas"><img src="img/servicios7.jpg" alt="Permutas" width="100%"class="imgRedonda"></a>
+                    <h5 class="textoCentrado">Tomamos tu usado en parte de pago</h5>
             </div>
         </div>
     </section>
@@ -153,12 +162,12 @@
     <footer class="boxFooter boxFooter--fondo boxFooter--letraS"> <!-- Comienzo footer-->
                 <h5 class="boxFooter__legales letraItalica textoCentrado">2021 - Todos los derechos reservados</h5>
                 <section class="boxFooter__redes">
-                    <a href="http://www.facebook.com"> <img src="img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
-                    <a href="http://www.twitter.com"><img src="img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
-                    <a href="http://www.instagram.com"><img src="img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
+                    <a href="http://www.facebook.com/alejandro.fuentes.39750" target="_blank"> <img src="img/facebook.png" alt="Facebook"></a> <!--Link a Facebook-->   
+                    <a href="http://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="Twitter"></a> <!-- Link a Twitter-->
+                    <a href="http://www.instagram.com/bebotefuentes/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a> <!--Link a Instagram-->
                 </section>
                 <section class="boxFooter__datosNegocio">
-                    <img src="img/logo_inv.png" alt="Logo Fuentes Automotores">
+                  <a href="index.html"><img src="img/logo_inv.png" alt="Fuentes Automotores"></a>
                     <p><strong>Tel:</strong> 4912-0084</p>
                     <p><strong>Dirección:</strong> Av. Brasil 3299, Parque Patricios (Capital Federal)</p>
                 </section>

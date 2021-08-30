@@ -12,20 +12,48 @@
 }
 .inputTranf{
     margin-top: 0.3rem;
-    width: 15em;
+    width: 17em;
     transition: all 1s;
+    background-color: $colorFondo;
+    border-style: unset;
+    border-bottom-style: solid;
+    border-bottom-color:$blanco;
+    border-bottom-width: thick;
+    color: $blanco ;
 }
 .inputTranf:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
-    width: 15em;
+    width: 17em;
     font-size: 1.1em;
+    background-color: $colorFondo;
+    border-style: unset;
+    border-bottom-style: solid;
+    border-bottom-color:$blanco;
+    border-bottom-width: thick;
+    color: $blanco ;
+    box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;
 }
 .inputTranfL{
-    width: 30em;
+    width: 17em;
+    height: 4em ;
     transition: all 1s;
+    background-color: $colorFondo;
+    border-style: unset;
+    border-bottom-style: solid;
+    border-bottom-color:$blanco;
+    border-bottom-width: thick;
+    color: $blanco ;
 }
 .inputTranfL:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
-    width: 30em;
+    width: 17em;
+    height: 8em ;
     font-size: 1.1em;
+    background-color: $colorFondo;
+    border-style: unset;
+    border-bottom-style: solid;
+    border-bottom-color:$blanco;
+    border-bottom-width: thick;
+    color: $blanco ;
+    box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;
 }
 .efectoAgrandar:hover{ /* Efecto para agrandar contenidos */ 
     transition: 2s;
@@ -40,4 +68,49 @@ ul li:hover ul{
 .boxFormConsulta__btn--color:hover{
     background-color: rgb(32, 32, 32) ;
     border-color:rgb(32, 32, 32) ;
+    color: $blanco
+}
+.boxFormConsulta__btn--color:active{
+    background-color: rgb(32, 32, 32) ;
+    border-color:rgb(32, 32, 32) ;
+    box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;   
+    color: $blanco;
+}
+.boxFormConsulta__btn--color:focus{
+    background-color: rgb(32, 32, 32) ;
+    border-color:rgb(32, 32, 32) ;
+    box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;   
+}
+.clickeable:hover{
+    cursor: pointer;
+}
+button a:hover{
+    color: $blanco;
+}
+@media only screen and (min-width: 768px) {
+    .inputTranfL{
+        width: 40rem;
+        transition: all 1s;
+    }
+    .inputTranfL:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
+        width: 40rem;
+        font-size: 1.1em;
+        box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;
+    }
+    .inputTranf{
+        margin-top: 0.3rem;
+        width: 20em;
+        transition: all 1s;
+    }
+    .inputTranf:focus{ /* Efecto para agrandar los campos de ingreso de valores de los formularios */
+        width: 20em;
+        font-size: 1.1em;
+        box-shadow: 0em 0em 0em 0.25em rgba(228, 228, 228, 0.5) ;
+        background-color: $colorFondo;
+        border-style: unset;
+        border-bottom-style: solid;
+        border-bottom-color:$blanco;
+        border-bottom-width: thick;
+        color: $blanco ;
+    }
 }
